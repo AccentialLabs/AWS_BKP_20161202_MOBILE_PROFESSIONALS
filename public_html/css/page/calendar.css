@@ -1,0 +1,46 @@
+@font-face {
+
+    font-family: "Open Sans";
+    src: url("../../fonte/OpenSans-Regular.ttf") format("truetype");
+
+}
+
+.textcalendar{
+     font-family: "Open Sans", sans-serif;
+     text-align: center;
+     font-size:5vw;
+     padding:3%;
+     color:#2497AC;
+    width:75%;
+    vertical-align: middle;
+ }
+
+.btn {
+    font-family:"Open Sans";
+}
+.btn1 {
+    border-radius: 0px;
+    width:11%;
+    font-family:"Open Sans";
+}
+.menu{
+    width: 8vw!important;
+    margin-top: 2vh!important;
+}
+
+.fc-view-basicDay .fc-today {
+
+    background:white;
+}
+
+.firstLine{
+    margin-top:18%;
+}
+.fc table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 3.8vw;
+    width: 99vw!important;
+}

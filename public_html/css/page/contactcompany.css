@@ -1,0 +1,235 @@
+@font-face {
+
+    font-family: "Open Sans";
+    src: url("../../fonte/OpenSans-Regular.ttf") format("truetype");
+
+}
+/*barra de pesquisa*/
+.navbar-form {
+    padding: 0px 30px;
+    margin-top: 0px;
+    margin-right: -15px;
+    margin-bottom: -10px;
+    margin-left: -15px;
+    border-top: 1px solid transparent;
+    border-bottom:0px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1);
+    bottom:0%;
+}
+
+.collapsing{
+    margin-bottom: -10px;
+}
+.navbar-form .form-group {
+    margin-bottom: 0px;
+    width: 100%;
+}
+.bottomLine{
+    border:2px solid #A9A055;
+    margin-top:0px;
+}
+.form-control {
+    font-family: "Open Sans";
+    display: inherit;
+    width: 100%;
+    height: 30px;
+    padding: 0px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: rgba(27, 27, 27, 0.51);
+    text-transform: uppercase;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.bottomLine1 {
+    margin-top: 6%;
+    border-bottom: 0.5px solid rgba(99, 92, 49, 0.46);!important;
+}
+.bottomLine2 {
+
+    border-bottom: 0.5px solid rgba(99, 92, 49, 0.46);!important;
+}
+.centerLogoJezzy{
+    heigth:50px!important;
+}
+.btns{
+    background-color: #2597ac;
+    font-size:1.2em;
+}
+.btns:hover{
+    color: #2597ac;
+}
+.subtitle{
+    width:60%;
+    vertical-align: middle!important;
+    color: #6e6d67;
+    font-family: "Open Sans";
+    float:left;
+    margin-top: 4.5%;
+    font-size: 4vw;
+    text-transform: uppercase;
+}
+
+.select-estiloso {
+    width:50%;
+    height: 35px;
+    border-radius: 70%!important;
+}
+.select-estiloso select {
+    width:100%; /* tamanho do select, maior que o tamanho do width da classe dropdown */
+    font-family:"Open Sans";
+    border: 2px solid #A9A055;
+    color:#A9A055;
+    font-size:3.5vw;/* novo ícone para o <select> */
+    background-color: #ffffff;
+    box-shadow:inset 0px 0px 10px #e8e8e8;
+    background:-webkit-linear-gradient(top, #fbfbfb, #efefef);
+    background:-moz-linear-gradient(top, #fbfbfb, #efefef);
+    background:-ms-linear-gradient(top, #fbfbfb, #efefef);
+    background:-o-linear-gradient(top, #fbfbfb, #efefef);
+}
+.cc-selectordados{
+    width:95%;
+    padding:0%;
+    margin-left:2%;
+}
+.cc-selector{
+    width:95%;
+    padding:0%;
+    margin-left:5%;
+}
+.cc-selector input{
+
+    margin:0;
+    padding:0;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    display: none;
+}
+.drinkcard-cc{
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:inline-block;
+    width:15%;
+    height:50px;
+    align-content:center;
+    -webkit-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    margin-top: 2%;
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.8);
+    -moz-filter: brightness(1.2) grayscale(.5) opacity(.8);
+    filter: brightness(1.2) grayscale(.5) opacity(.8);
+
+}
+.follow{background-image:url(../../img/icons/seguir-07.png);}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc{
+    background-image:url(../../img/icons/Follow-02.png);
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+}
+.tablecontentBOTTOM{
+    width:100%;
+    vertical-align: middle;
+    color:#2497AC;
+    font-size:4vw;
+    text-transform: uppercase;
+    text-align: center;
+    padding:5%;
+    font-family: "Open Sans";
+    height:60px;
+    font-weight: bold;
+}
+.tablecontent{
+    height:20px;
+    vertical-align: middle;
+    color: #6e6d67;
+    font-size:4vw;
+    text-transform: uppercase;
+    text-align: center;
+    padding:5%;
+    font-family: "Open Sans";
+    border-right:0.5px solid rgba(163, 162, 155, 0.33);
+}
+.logo{
+    width:19%;
+    float:left;
+    margin-top: 2%;
+    height: 60px;
+    overflow: hidden;
+}
+
+.centerLogoJezzy img {
+    width:100%;
+    vertical-align: middle;
+
+}
+.gogo{
+    font-size: 18px;
+}
+.row{
+    padding:0%!important;
+    margin:0% !important;
+
+
+}
+.followbutton{
+    width:19%;
+    float:right;
+
+
+}
+.listColorsAndFont {
+    color: #2497AC;
+    font-size: 4.5vw;
+    text-align: center;
+    font-family: "Open Sans";
+}
+.galeryImage{
+    width:25%;
+    vertical-align: middle;
+}
+.conteudo{
+    margin-top:5%;
+}
+.titulojezzy{
+    font-family: "Open Sans";
+    color: #2497AC;
+    font-size: 3.5vw;
+    text-align: center;
+
+}
+.titulo{
+    background-color: blue;
+}
+.row{
+    padding: 0%!important;
+    margin: 0%!important;
+}
+.share{
+    padding:.5%;
+    width:100%;
+    margin-top:0%;
+}
+
+.icone {
+    width: 10%;
+
+}
+.container{
+    padding: 0%!important;
+    margin: 0%!important;
+    margin-top: 13%!important;
+}

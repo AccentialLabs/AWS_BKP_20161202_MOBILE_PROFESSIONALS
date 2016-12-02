@@ -1,0 +1,96 @@
+@font-face {
+
+    font-family: "Open Sans";
+    src: url("../../fonte/OpenSans-Regular.ttf") format("truetype");
+
+}
+
+.logoBussinessSize {
+    width: 150%;
+    cursor:pointer;
+}
+.listColorsAndFont {
+    color: #2497AC;
+    font-size: 18px;
+}
+
+.informationLine {
+    font-size: 12px;
+    color: #64B7C6;
+    line-height: 1;
+    padding-left: 11px;
+}
+.titulo{
+    color: #2497AC;
+    font-size: 18px;
+    width:79%;
+}
+.marginBottom10 {
+    margin-bottom: 10px;
+}
+.marginBotton8px {
+    margin-bottom: 8px;
+}
+.marginTop10 {
+    margin-top: 10px;
+}
+.marginTop15 {
+    margin-top: 15px;
+}
+.typeOfLocation{
+    font-size: 20px;
+}
+.streetOfAdreess{
+    display: block;
+    font-size: 15px;
+}
+.cepOfAdreess{
+    font-size: 15px;
+}
+.lineNewAddress {
+    color: white;
+
+    padding: 5px;
+    margin-top:-10%;
+}
+.okNewAddress {
+    background: rgb(169, 160, 85);  
+    color: white;
+    text-align: center;
+    height: 35px;
+    padding: 5px;
+    margin-top: 10px;
+}
+.titulo{
+    color: #2497AC;
+    font-size: 1.3em;
+    width:79%;
+}
+
+
+.btn-success  {
+    background-color: #2497ac;
+    border-color: #2497ac;
+}
+.btn-info {
+    background-color: #A9A055;
+    border-color: #A9A055;
+}
+
+
+.col-xs-4{
+    width:40%!important;
+    padding:5%!important;
+    margin-left:1%!important;
+
+}
+.titulo {
+    margin-top:4%!important;
+    font-size:1em;
+}
+.modal-content {
+    text-align: center;
+    height: 50px;
+    padding-top: 15px;
+    color: #2497AC;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jezzy</title>
+    <!--charset-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--tipo de dispositivo para wiew-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--icone-->
+    <link rel="shortcut icon" href="img/icons/favicon.ico">
+    <!--jquery-->
+    <script src="lib/jquery/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <!--jasny-bootstrap-->
+    <script src="lib/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/jasny-bootstrap/css/jasny-bootstrap.min.css">
+    <!--jquery storage-->
+    <script src="lib/jquery/jquery.base64.js"></script>
+    <script src="lib/jquery-storage/jquery.cookie.js"></script>
+    <script src="lib/jquery-storage/jquery.storageapi.min.js"></script>
+    <!--jquery confirm-->
+    <script src="lib/jquery-confirm/js/jquery-confirm.min.js"></script>
+    <link rel="stylesheet" href="lib/jquery-confirm/css/jquery-confirm.min.css">
+    <!--biblioteca json-->
+    <script src="lib/jquery-storage/json2.js"></script>
+    <!--base-->
+    <script src="js/page/base.js"></script>
+    <link rel="stylesheet" href="css/page/base.css">
+	<link rel="stylesheet" href="lib/font-awesome-4.6.3/css/font-awesome.css">
+    <!--configurações globais de caminho-->
+    <script src="js/page/configuracao.js"></script>
+    <!--momentjs-->
+    <script src="lib/momentjs/moment.js"></script>
+
+
+    <link rel="stylesheet" href="css/page/offer_display.css">
+    <script type="text/javascript" charset="UTF-8" src="js/page/offer_display.js"></script>
+
+
+</head>
+<body class="fadeIn">
+<nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+    <a class="navmenu-brand" id="userName" href="#">Jezzy</a>
+    <ul class="nav navmenu-nav">
+        <li><a href="home.html"><img src='img/icons/homeFooterIcon.PNG' class="icon-bar">HOME</a></li>
+        <li><a href="my_profile.html"><img src='img/icons/Usuario.png' class="icon-bar">PERFIL</a></li>
+        <!--li><a href="company_selection.html"  id="calendarServicesOptions2" ><img src='img/icons/calendarFooterIcon.PNG' class="icon-bar">AGENDAR</a></li-->
+        <!--li class="active"><a href="offer_display.html"><img src='img/icons/offerFooterIcon.PNG' class="icon-bar">OFERTAS</a></li-->
+        <li><a href="services_history.html"><img src='img/icons/Servicos.png' class="icon-bar">SERVIÇOS REALIZADOS</a></li>
+        <!--li><a href="offer_history.html"><img src='img/icons/cardFooterIcon.PNG' class="icon-bar">COMPRAS REALIZADAS</a></li-->
+        <!--li><a href="notifications.html"><img src='img/icons/Sino.png' class="icon-bar">NOTIFICAÇÕES</a></li-->
+        <li><a href="news.html"><img src='img/icons/feedNoticias.png' class="icon-bar">FEED/NOTÍCIAS</a></li>
+        <!--li><a href="vouchers_list.html"><img src='img/icons/Voucher-02.png' class="icon-bar">MEUS VOUCHERS</a></li-->
+        <li><a onclick="Sair();"><img src='img/icons/Sair%20-%20branco-07.png' class="icon-bar" onclick="Sair();">SAIR</a></li>
+    </ul>
+</nav>
+<div class="navbar navbar-default navbar-fixed-top centerLogoJezzy">
+            <span class="">
+                <img src="img/icons/logo_login.PNG" class="sizeLogo" id="scroll" />
+            </span>
+    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body" id="btnMyNavMenu">
+        <img src="img/icons/Menu.png" class="menu" id="menu"/>
+    </button>
+            <span class="iconSearchJezzy" >
+                <div  class="menu" ></div>
+            </span>
+    <div class="bottomLine"></div>
+</div>
+<div class="togglebar col-xs-12" style="border-bottom: 1px solid #d3d3d3;">
+    <img src="img/icons/Chevron%20dourado.png" class="icone backbutton col-xs-2" onclick="voltar();">
+    <div class="newAddressText col-xs-10" id="offersdisplaytitle"  style="margin-top:3%;">ANIVERSARIANTES DO MÊS</div>
+
+
+        <!--script>
+
+           (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5&appId=1250819064947441";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+
+           FB.ui({
+               method: 'share_open_graph',
+               action_type: 'og.likes',
+               action_properties: JSON.stringify({
+                   object:'https://developers.facebook.com/docs/'
+               })
+           }, function(response){
+               console.log(response);
+           });
+        </script-->
+</div>
+
+<div class='bottomLine1'></div>
+<div class="container" id="offerDisplay" >
+
+
+</div>
+<div id="divloading" class="text-center">
+	<img src="https://secure.jezzy.com.br/uploads/loading/loader3.gif" id="loading" />
+</div>
+
+</body>
+
+</html>

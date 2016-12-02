@@ -1,0 +1,257 @@
+@font-face {
+
+    font-family: "Open Sans";
+    src: url("../../fonte/OpenSans-Regular.ttf") format("truetype");
+
+}
+.bottomLine {
+    margin-top:2%;
+    border: 1px solid #A9A055!important;
+}
+.marginTop10 {
+    margin-top: 10px;
+
+}
+.marginBotton8px {
+    margin-bottom: 8px;
+}
+.commentdescriptiontitles{
+    color:#a1a1a1;
+    font-family: "Open Sans", sans-serif;
+    font-size: 3.2vw;
+    margin-top:15%;
+    text-align: justify;
+    width:80%;
+    margin-left:15%;
+    font-weight: bold;
+
+}
+.newAddressText {
+    text-align: center;
+    color: #2497AC;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-left:2%;
+
+}
+
+.numberOfStars{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width:10%;
+
+}
+.numberOfStars2{
+    margin-top: 3px;
+    margin-bottom: 10px;
+    margin-left: 50%;
+
+
+}
+.comments{
+    margin-top:3%;
+
+}
+.glyphicon{
+    margin-left: 7%;
+    color: #a1a1a1;
+    display:inline-block;
+    margin-top:5%;
+
+}
+.commentdescription{
+    color:#a1a1a1;
+    font-family: "Open Sans", sans-serif;
+    font-size: 3.2vw;
+    font-weight: 400;
+    margin-top:1%;
+    text-align: justify;
+    width:80%;
+    margin-left:15%;
+
+}
+.date{
+    color: #2497ac;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.5vw;
+    font-weight: 400;
+    margin-top:2%;
+    text-align: justify;
+    width:16%;
+    margin-left:80%;
+
+}
+.commentdescriptiontitle{
+
+    color:#a1a1a1;
+    font-family: "Open Sans", sans-serif;
+    font-size: 3.2vw;
+    font-weight: 400;
+    margin-top:5%;
+    text-align: justify;
+    width:80%;
+    margin-left:15%;
+    font-weight: bold;
+
+}
+.numberOfStarsLine{
+    text-align: center;
+
+}
+.marginTop15 {
+    margin-top: 15px;
+
+}
+.marginBottom10 {
+    margin-bottom: 10px;
+
+}
+input.transparent-input {
+    display: block;
+    background-color: transparent !important;
+    border: none !important;
+    width: 100%;
+    height: 27px;
+    word-break: break-all;
+}
+input.transparent-input2{
+    display: block;
+    background-color:transparent !important;
+    border:none !important;
+    width: 100%;
+    height:5%;
+    word-break: break-all;
+
+}
+.unit {
+    position: absolute;
+    display: block;
+    left: 16px;
+    top: 3px;
+    z-index: 8;
+    font-family:'Open Sans';
+    color: #a1a1a1;
+    font-size:13pt;
+
+}
+.textAreaOption {
+    margin: 0px;
+    height: 123px;
+    width: 100%;
+    border-radius: 5px;
+    border: none !important;
+
+}
+.newAddressInfo {
+    color:  #5e5e5e;
+    font-size: 15px;
+
+}
+.titleComment{
+     padding: 8px 10px 10px 200px;
+
+ }
+
+.Comment{
+    padding: 5px 0px 0px 95px;
+
+}
+.okNewAddress {
+
+    color: white;
+    text-align: center;
+    height: 35px;
+    padding: 5px;
+    margin-top: 10px;
+
+}
+.socialIcom{
+        width: 40px;
+    margin-top: 17px;
+    margin-bottom: 8px;
+
+}
+.socialRow {
+    text-align: center;
+
+}
+.marginLeft10{
+    margin-left: 10px;
+}
+.btn {
+    border-radius: 0px;
+    margin-top: 10px;
+    font-family:"Open Sans";
+
+}
+.btn-success  {
+    background-color: #2497ac;
+    border-color: #2497ac;
+
+}
+.btn-info {
+    background-color: #A9A055;
+    border-color: #A9A055;
+
+}
+.btn-warning {
+    color: #A9A055;
+    background-color: #FFFFFF;
+    border-color: #A9A055;
+}
+.titulo{
+    color: #2497AC;
+    font-size: 15px;
+    width:80%;
+    text-align:center;
+    vertical-align:middle;
+}
+.icone {
+    width: 8%;
+    padding: 1%;
+    margin-top:2%;
+    margin-left: 3%!important;
+}
+.row{
+    margin-left: 0%!important;
+    margin-right: 0%!important;
+}
+.transparent-input{
+     display: block;
+     background-color:transparent !important;
+     border:none !important;
+     padding:10px 0px 10px 0px;
+     width: 100%;
+     font-family: "Open Sans";
+ }
+.name_user{
+    position:absolute;
+    margin-top:6%;
+    margin-left:15%;
+}
+.transparent-input2 {
+    display: block;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 2px 0px 10px 0px;
+}
+
+.tituloa{
+    color: #2497AC;
+    font-size: 1.3em;
+    width:40%!important;
+}
+.container{
+    padding-right: 0px!important;
+    padding-left: 0px!important;
+}
+.photoUser{
+    margin-top:5%;
+    width: 10.5%;
+    height: 6.5%;
+    float:left;
+    position:absolute;
+    border-radius: 50%;
+    border: 1px solid  #2497AC;
+    margin-left: 1%;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+        <html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jezzy</title>
+    <link rel="shortcut icon" href="img/icons/favicon.ico">
+    <script src="lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="lib/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/jasny-bootstrap/css/jasny-bootstrap.min.css">
+    <script src="js/page/configuracao.js"></script>
+    <script src="lib/jquery-storage/jquery.cookie.js"></script>
+    <script src="lib/jquery-storage/jquery.storageapi.min.js"></script>
+    <script src = "js/page/rss.js"></script>
+    <script src = "js/page/rssmakeup.js"></script>
+    <script src = "js/page/rssnail.js"></script>
+    <script src = "js/page/rsss.js"></script>
+    <script src = "lib/pagination/js/jquery.quick.pagination.min.js"></script>
+    <link rel="stylesheet" href="lib/pagination/css/styles-pagination.css">
+    <link rel="stylesheet" href="lib/pagination/css/styles.css">
+    <!--PUSHER MSG-->
+    <link rel="stylesheet" href="css/page/newsfeedcategory.css">
+    <link rel="stylesheet" href="css/page/base.css">
+    <script src="js/page/base.js"></script>
+
+    <script language="JavaScript" type="application/javascript">
+
+        function ClickCategory() {
+            var botao='';
+            var sPageUrl = window.location.search.substring(1);
+            var sURLVariables = sPageUrl.split('&');
+            for (var i = 0; i < sURLVariables.length; i++) {
+                var sParameterName = sURLVariables[i].split('=');
+                console.log("Mostra saporra " + sParameterName[1]);
+                botao = sParameterName[1];
+            }
+            var urlRss;
+            var header='';
+            if($.cookieStorage.get('SecondaryUser').gender == 'female'){
+                gender = 'female';
+            }else{
+                gender = 'male';
+            }
+            if(gender == 'female') {
+                if (botao == 'unha') {
+                    urlRss = 'http://unhasinspiradas.com/feed/';
+                    header = document.getElementById('mostraHeader').innerHTML = "UNHA";
+                } else if (botao == 'beleza') {
+                    urlRss = 'http://chic.uol.com.br/rss/beleza.rss';
+                    header = document.getElementById('mostraHeader').innerHTML = "BELEZA";
+                } else if (botao == 'maquiagem') {
+                    urlRss = 'http://www.gazetadopovo.com.br/viver-bem/moda-e-beleza/feed/';
+                    header = document.getElementById('mostraHeader').innerHTML = "MAQUIAGEM";
+                } else if (botao == 'sobrancelha') {
+                    urlRss = 'http://www.gazetadopovo.com.br/viver-bem/feed/';
+                    header = document.getElementById('mostraHeader').innerHTML = "SOBRANCELHA";
+                }
+            }else{
+                if (botao == 'unha') {
+                    urlRss = 'http://feeds.feedburner.com/TiposDeBarba?format=xml';
+                    header = document.getElementById('mostraHeader').innerHTML = "BARBA";
+                } else if (botao == 'beleza') {
+                    urlRss = 'http://www.machomoda.com.br/feeds/posts/default?alt=rss';
+                    header = document.getElementById('mostraHeader').innerHTML = "BELEZA";
+                } else if (botao == 'maquiagem') {
+                    urlRss = 'http://mulherohomemdacasa.com.br/feed/';
+                    header = document.getElementById('mostraHeader').innerHTML = "CABELO";
+                } else if (botao == 'sobrancelha') {
+                    urlRss = 'http://www.canalmasculino.com.br/feed/';
+                    header = document.getElementById('mostraHeader').innerHTML = "MODA";
+                }
+            }
+            $.ajax({
+                type: "GET",
+                url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=1000&callback=?&q=' + encodeURIComponent(urlRss),
+                dataType: 'json',
+                error: function (xhr) {
+                    var erro = xhr.responseText;
+                    alert('Erro ao ler o feed: ' + erro);
+                },
+                success: function (xml) {
+                    values = xml.responseData.feed.entries;
+                    for (var i = 0; i < values.length; i++) {
+                        var value = values[i];
+                        var li = $("<li />");
+                        var conteudo = value.content;
+                        li.html(value.title + "<br />" + conteudo);
+                        $("#resultnewsfeed").append(li);
+                        $(" #resultnewsfeed  a").css( "cursor", "pointer" );
+                        $(" #resultnewsfeed  a").css( "pointerEvents", "none" );
+                        $(" #resultnewsfeed  a").css( "color", "#8c8c8c" );
+                        $("#resultnewsfeed > li > div > a > img").css( "width", "100%" );
+                        $('#resultnewsfeed').quickPagination({pageSize:"2"});
+
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+
+<body onload="ClickCategory();"  class="fadeIn">
+<nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+    <a class="navmenu-brand" id="userName" href="#">Jezzy</a>
+    <ul class="nav navmenu-nav">
+        <li><a href="home.html"><img src='img/icons/homeFooterIcon.PNG' class="icon-bar">HOME</a></li>
+        <li><a href="my_profile.html"><img src='img/icons/Usuario.png' class="icon-bar">PERFIL</a></li>
+        <!--li><a href="company_selection.html"  id="calendarServicesOptions2" ><img src='img/icons/calendarFooterIcon.PNG' class="icon-bar">AGENDAR</a></li-->
+        <!--li><a href="offer_display.html"><img src='img/icons/offerFooterIcon.PNG' class="icon-bar">OFERTAS</a></li-->
+        <li><a href="services_history.html"><img src='img/icons/Servicos.png' class="icon-bar">SERVIÇOS REALIZADOS</a></li>
+        <!--li><a href="offer_history.html"><img src='img/icons/cardFooterIcon.PNG' class="icon-bar">COMPRAS REALIZADAS</a></li-->
+        <!--li><a href="notifications.html"><img src='img/icons/Sino.png' class="icon-bar">NOTIFICAÇÕES</a></li-->
+        <li class="active"><a href="newsfeed.html"><img src='img/icons/feedNoticias.png' class="icon-bar">FEED/NOTÍCIAS</a></li>
+        <!--li><a href="vouchers_list.html"><img src='img/icons/Voucher-02.png' class="icon-bar">MEUS VOUCHERS</a></li-->
+        <li><a onclick="Sair();"><img src='img/icons/Sair%20-%20branco-07.png' class="icon-bar" onclick="Sair();">SAIR</a></li>
+    </ul>
+</nav>
+<div class="navbar navbar-default navbar-fixed-top centerLogoJezzy" style="">
+            <span class="centerLogo">
+                <img src="img/icons/logo_login.PNG" class="marginTop5 sizeLogo" id="scroll"/>
+            </span>
+    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+        <img src="img/icons/Menu.png" class="menu" id="menu"/>
+    </button>
+            <span class="iconSearchJezzy" >
+                <img src="img/icons/Usuario.png" class="menu marginTop5" id="UserLink"  />
+            </span>
+    <div class="bottomLine"></div>
+</div>
+<div class=" firstLine col-xs-12">
+    <img src="img/icons/Chevron%20dourado.png" onclick="voltar(); " class="btn icone col-xs-2">
+</div>
+    <div class="col-md-10 pull-left logocentral" >
+      <span id="mostraHeader" class="header"></span>
+    </div>
+
+<div id="resultnewsfeed" style="padding-bottom:2%;text-justify:distribute; margin-top:-3%; cursor: pointer; pointer-events: none; color:#8c8c8c;" class="textocoluna" > <br>
+</div>
+
+</body>
+</html>

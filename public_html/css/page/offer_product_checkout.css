@@ -1,0 +1,186 @@
+@font-face {
+
+    font-family: "Open Sans";
+    src: url("../../fonte/OpenSans-Regular.ttf") format("truetype");
+
+}
+.unitValue{
+    text-decoration: line-through;
+}
+.offerNewPrice{
+    color: #2497AC;
+    font-weight:800;
+}
+.modal-content2{
+    height:70px;
+}
+.bottonBuy{
+    font-family: "Open Sans";
+    background: #A9A055;
+    color: white;
+    text-align: center;
+    height: 30px;
+    padding-top: 5px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+.bottonaddress{
+    font-family: "Open Sans";
+    background: #cac597;
+    color: white;
+    text-align: center;
+    height: 30px;
+    padding-top: 5px;
+    margin-top: 14px;
+    margin-bottom: 10px;
+}
+.squereInput {
+    font-family: "Open Sans";
+    width: 30px;
+    height: 28px;
+    padding-top: 0px;
+}
+.btn-group-xs>.btn, .btn-xs {
+    font-family: "Open Sans";
+    font-size: 11px;
+    border-radius: 0px;
+    height: 28px;
+    width: 30px;
+}
+.btn-primary {
+    font-family: "Open Sans";
+    color:#816825;
+    background-color: rgba(51, 122, 183, 0);
+    border-color:#816825;
+}
+.bussinessName {
+    font-family: "Open Sans";
+    display: block;
+    color: #2497AC;
+    font-size: 14px;
+}
+.offerName {
+    font-family: "Open Sans";
+    color: #848484;
+    font-size: 4vw;
+    margin-left: 25%;
+}
+
+.closeIcon{
+    font-family: "Open Sans";
+    width: 30px;
+    margin-top: 5px;
+}
+
+.logoIcon{
+    font-family: "Open Sans";
+    width: 37px;
+}
+.offerImage {
+    font-family: "Open Sans";
+    width: 50%;
+    float: left;
+}
+.textInfoDetail{
+    font-family: "Open Sans";
+    font-size: 12px;
+    color: #8d8d8d;
+    margin-top: 5px;
+}
+.addressValue{
+    font-family: "Open Sans";
+    display: block;
+}
+.addressInfo{
+    font-family: "Open Sans";
+    color: #979797;
+}
+.totalValue{
+    font-family: "Open Sans";
+    display: block;
+    font-size: 20px;
+    color: #2497AC;
+}
+.addressValue{
+    font-family: "Open Sans";
+    font-size: 12px;
+}
+.offerCode{
+    font-family: "Open Sans";
+    color: #b9b9b9;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    text-align: center;
+
+}
+.textbuttom{
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: bold;
+}
+.deliverySchedule{
+    font-family: "Open Sans";
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.deliveryValue{
+    font-family: "Open Sans";
+
+    color: #2497AC;
+}
+.paymentRow{
+    font-family: "Open Sans";
+    text-align: center;
+    width:100%;
+     padding:0%;
+
+}
+.paymentMethod{
+    font-family: "Open Sans";
+    width: 35px;
+}
+.marginLeftPayment{
+    font-family: "Open Sans";
+    margin-left: 10px;
+}
+.textbuttomValue:hover{
+    color: #2497AC;
+    font-family: "Open Sans";
+    background-color: rgba(51, 122, 183, 0);
+}
+
+.btn-info {
+    background-color: #A9A055;
+    border-color: #A9A055;
+}
+.row{
+    width:100%;
+    padding:0%!important;
+    margin:0%!important;
+}
+
+
+.titulo{
+    text-align: center;
+    color: #2597AC;
+    font-size: 5vw;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+
+}
+
+.btnadd1{
+    bottom:13%;
+    position:absolute;
+}
+.btnadd{
+    bottom:7%;
+    position:absolute;
+}
+
+.container{
+    width:100%;
+    padding:0%!important;
+
+
+}

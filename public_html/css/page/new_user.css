@@ -1,0 +1,190 @@
+@font-face {
+
+    font-family: "Open Sans";
+    src: url("../../fonte/OpenSans-Regular.ttf") format("truetype");
+
+}
+.bottomLine {
+    border-bottom: 1px solid #A9A055;
+}
+.newAddressText{
+    margin-left:-3%;
+}
+.marginTop10 {
+    margin-top: 10px;
+}
+.marginBotton8px {
+    margin-bottom: 8px;
+}
+
+.newAddressInfo {
+    color: #2497AC;
+    font-size: 15px;
+}
+.rowLogo {
+    text-align: center;
+    margin-top: 25px;
+}
+.marginTop15 {
+    margin-top: 15px;
+}
+.iconeforgotpassword{
+    width: 80%;
+
+}
+
+.marginBottom10 {
+    margin-bottom: 10px;
+}
+.marginTop5 {
+    margin-top: 5px;
+}
+.marginBottom5 {
+    margin-bottom: 5px;
+}
+.logobackgroundWhite{
+    width:90%;
+}
+.logocentral{
+    width:40%;
+    margin-left:15%;
+}
+.container{
+    margin-top: 0%;
+}
+.rowLogo {
+    width: 100%;
+    text-align: center;
+    alignment: center;
+    margin-top: 20px;
+    padding: 0px;
+    margin-top: 20px;
+}
+.companyListNames{
+    text-align: center;
+}
+.logolateral{
+    float: left;
+    width:20%
+}
+
+.lineNewAddress {
+    width:100%;
+    color: white;
+    text-align: center;
+    height: 35px;
+
+    margin-top: 30px;
+}
+.okNewAddress {
+    background: rgb(169, 160, 85);
+    color: white;
+    text-align: center;
+    height: 35px;
+    padding: 5px;
+    margin-top: 10px;
+}
+input.transparent-input {
+    display: block;
+    background-color: transparent !important;
+    border: none !important;
+    width: 100%;
+
+}
+.btnbottom{
+        font-family: "Open Sans", sans-serif;
+    margin-top: 10%;
+}
+.unit {
+    position: absolute;
+    display: block;
+    left: 16px;
+    top: 3px;
+    z-index: 9;
+    font-family: "Open Sans", sans-serif;
+}
+
+.unit2 {
+    color:red;
+    display: none;
+    z-index: 9;
+    font-family: "Open Sans", sans-serif;
+
+}
+.rowinput{
+    margin-top:5%;
+}
+.cep{
+    padding: 10px 10px 10px 50px;
+
+}
+
+input.transparent-input{
+    border-bottom: 1px solid #A9A055 !important;
+}
+.endereco{
+    padding: 10px 10px 10px 50px;
+
+}
+.complemento{
+    padding: 10px 10px 10px 60px;
+}
+.bairro{
+    padding: 10px 10px 10px 160px;
+}
+.bairro2{
+    padding: 10px 10px 10px 170px;
+}
+.numero{
+    padding: 10px 10px 10px 60px;
+}
+.cidade{
+    padding: 10px 10px 10px 55px;
+}
+.estado{
+    padding: 10px 10px 10px 55px;
+}
+.complemento2{
+    padding: 5px 10px 5px 80px;
+}
+.imageGoBack {
+    width: 20px;
+    float: left;
+}
+.icone{
+    margin-top:0%!important;
+}
+
+.btn {
+    border-radius: 0px;
+
+    font-family:"Open Sans";
+}
+.btn-success  {
+    background-color: #2497ac;
+    border-color: #2497ac;
+}
+
+.btn-info {
+    background-color: #A9A055;
+    border-color: #A9A055;
+}
+.btn-warning {
+    color: #A9A055;
+    background-color: #FFFFFF;
+    border-color: #A9A055;
+}
+.titulo{
+    color: #2497AC;
+    font-size: 18px;
+    width:79%;
+}
+
+
+.btnadd{
+    bottom:1%;
+    position:absolute;
+    padding:4%;
+    width:97%;
+    margin-left:2%;
+}

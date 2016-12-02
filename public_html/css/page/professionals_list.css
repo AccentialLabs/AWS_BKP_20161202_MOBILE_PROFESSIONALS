@@ -1,0 +1,177 @@
+@font-face {
+
+    font-family: "Open Sans";
+    src: url("../../fonte/OpenSans-Regular.ttf") format("truetype");
+
+}
+.listColorsAndFont {
+    color: #2497AC;
+    font-size: 18px;
+    font-family: "Open Sans";
+}
+
+.marginTop20{
+    margin-top: 10%;
+    margin-bottom: 10px;
+}
+.fontSizeClass {
+    font-size: 15px;
+}
+.textCenter {
+    text-align: center;
+}
+.row{
+ padding:0%;
+
+}
+.informationLine {
+    font-size: 12px;
+    color: #9b9b9b;
+    line-height: 1;
+    padding-left: 11px;
+}
+
+.imgeProfessional{
+    margin-top: 20px;
+}
+.profissionalName{
+    padding-left: 11px;
+    margin-top: 5px;
+}
+.marginBotton6px{
+    margin-bottom: 6px;
+}
+.correctList {
+    margin-bottom: 50px;
+}
+.col-xs-1{
+
+    margin:0%;
+    padding:0%;
+}
+.col-xs-11{
+
+    font-size:5vw;
+    vertical-align: middle;
+    padding:0px;
+}
+
+.title{
+    font-size:2vw;
+}
+
+.fotousuario {
+    position: relative;
+    width: 18vw;
+    height: 10vh;
+    overflow: hidden;
+    border:2px solid #A9A055;
+    border-radius: 80% 80% 80% 80%;
+    margin-left: 5%;
+}
+
+.fotousuario img {
+    left:48%;
+    top: 50%;
+    min-height: 12vh;
+    height:auto;
+    width:23vw;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border:0px solid #A9A055;
+}
+.col-xs-8{
+
+    padding:0%;
+}
+.col-xs-12{
+    padding:0%;
+    margin-top: 6px;
+    margin-left:3%;
+
+}
+.row{
+    width:100%;
+    margin-top:10px;
+}
+
+.container{
+   padding:0%;
+}
+.subtitle{
+    font-family: "Open Sans";
+    color:#2497AC;
+    font-size:4vw;
+    text-transform: uppercase;
+    margin-top:3%;
+
+}
+.title{
+    font-size:5vw;
+    font-family: "Open Sans";
+    color:#2497AC;
+    width:80%;
+}
+.bottomLine1{
+    border:1px solid #A9A055;
+
+}
+@font-face {
+
+    font-family: "Open Sans";
+    src: url("../../fonte/OpenSans-Regular.ttf") format("truetype");
+
+}
+.bottomLine {
+    width: 100%;
+    border-bottom: 1px solid #A9A055;
+}
+.bottomLine2{
+    width: 100%;
+    border-bottom: 0.5px solid #A9A055;
+}
+.tablecontent{
+    height:60px;
+    display: table-cell;
+    vertical-align: middle;
+    color: #6e6d67;
+    font-size:3vw;
+    text-align: center;
+    padding:1%;
+    font-family: "Open Sans";
+    border-right:0.5px solid rgba(163, 162, 155, 0.33);
+}
+.listColorsAndFont {
+    color: #2497AC;
+    font-size: 4.5vw;
+    text-align: center;
+    font-family: "Open Sans";
+}
+.galeryImage{
+    width:25%;
+    vertical-align: middle;
+}
+.titulojezzy{
+    font-family: "Open Sans";
+    color: #2497AC;
+    font-size: 3.5vw;
+    text-align: center;
+}
+.historyContent{
+    margin-top: 5%;
+}
+.row{
+    padding: 0%!important;
+    margin: 0%!important;
+}
+.share{
+    padding:.5%;
+    width:100%;
+    margin-top:0%;
+}
+
+.icone {
+    width: 10%;
+
+}

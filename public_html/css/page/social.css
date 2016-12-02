@@ -1,0 +1,193 @@
+@font-face {
+
+    font-family: "Open Sans";
+    src: url("../../fonte/OpenSans-Regular.ttf") format("truetype");
+
+}
+.iconeforgotpassword{
+    width:100%;
+    text-align:center;
+
+
+}
+.conteudo{
+    padding:0%;
+    width: 100%;
+margin-top:13%;
+}
+
+.logocentral{
+    width:80%;
+    font-family: "Open Sans";
+    font-size:7vw;
+    color:#2497AC;
+    margin-top:4%;
+    PADDING:0%;
+}
+
+.logolateral {
+    width:20%;
+    font-family: "Open Sans";
+    margin-top:4%;
+    color: #2497AC;
+    float:left;
+}
+
+.espaco{
+    width:10%;
+    float:left;
+}
+
+.line {
+    width: 100%;
+    border-bottom: 3px solid #A9A055;
+    position:relative;
+
+
+}
+.line6 {
+    width: 100%;
+    border-bottom: 3px solid #A9A055;
+    margin-top: 15%;
+    margin-bottom:5%;
+
+}
+.line5 {
+    width: 100%;
+    border-bottom: 3px solid #A9A055;
+    margin-top: 20%;
+    margin-bottom:0%;
+}
+
+
+
+.politicasdeprivacidade{
+    text-align: center;
+    color:  #A9A055;
+    font-size:10pt;
+    font-family: "Open Sans";
+    position:absolute;
+    bottom:3%;
+
+}
+
+
+
+.c1{
+    margin-left:5%;
+    float:  left;
+    font-size:6vw;
+    font-family:'Open Sans';
+
+}
+
+.c{
+    float:  left;
+    width:15%;
+    font-family:'Open Sans';
+    padding-left:3%;
+
+
+}
+
+.c2{
+    margin-left:5%;
+    margin-top:3%;
+    float: left;
+    width: 6%;
+    font-family:'Open Sans';
+
+}
+
+
+
+.c4{
+    float: left;
+    width: 10%;
+    font-size:6vw;
+    font-family:'Open Sans';
+    margin-top:7px;
+
+}
+
+
+.onoffswitch2 {
+    position: relative; width: 41px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch2-checkbox {
+    display: none;
+}
+.onoffswitch2-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 50px;
+}
+.onoffswitch2-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch2-inner:before, .onoffswitch2-inner:after {
+    display: block; float: left; width: 50%; height: 7px; padding: 0; line-height: 7px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch2-inner:before {
+    content: "";
+    padding-left: 13px;
+    background-color: #EEEEEE; color: #34A7C1;
+}
+.onoffswitch2-inner:after {
+    content: "";
+    padding-right: 13px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch2-switch {
+    display: block; width: 18px; margin: -5.5px;
+    background: #A1A1A1;
+    position: absolute; top: 0; bottom: 0;
+    right: 30px;
+    border: 2px solid #999999; border-radius: 50px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch2-checkbox:checked + .onoffswitch2-label .onoffswitch2-inner {
+    margin-left: 0;
+}
+.onoffswitch2-checkbox:checked + .onoffswitch2-label .onoffswitch2-switch {
+    right: 0px;
+    background-color: #27A1CA;
+}
+.row{
+    width:100%;
+}
+
+
+
+.unit2 {
+    position: relative;
+    display: block;
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+    z-index: 9;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    color: #A9A055;
+
+}
+
+
+.col-xs-12{
+margin-top:-0%;
+padding:0%;
+}
+
+.input-box {
+    width: 100%;
+    margin-top:10px;
+    margin-bottom:20px;
+    color: #A9A055;
+
+
+}
+

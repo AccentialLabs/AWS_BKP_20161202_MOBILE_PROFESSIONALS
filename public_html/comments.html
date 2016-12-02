@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jezzy</title>
+        <!--charset-->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <!--tipo de dispositivo para wiew-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--icone-->
+        <link rel="shortcut icon" href="img/icons/favicon.ico">
+        <!--jquery-->
+        <script src="lib/jquery/jquery-2.1.4.min.js"></script>
+        <!--bootstrap-->
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <!--jasny-bootstrap-->
+        <script src="lib/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+        <link rel="stylesheet" href="lib/jasny-bootstrap/css/jasny-bootstrap.min.css">
+        <!--jquery storage-->
+        <script src="lib/jquery/jquery.base64.js"></script>
+        <script src="lib/jquery-storage/jquery.cookie.js"></script>
+        <script src="lib/jquery-storage/jquery.storageapi.min.js"></script>
+        <!--jquery confirm-->
+        <script src="lib/jquery-confirm/js/jquery-confirm.min.js"></script>
+        <link rel="stylesheet" href="lib/jquery-confirm/css/jquery-confirm.min.css">
+        <!--biblioteca json-->
+        <script src="lib/jquery-storage/json2.js"></script>
+        <!--base-->
+        <script src="js/page/base.js"></script>
+        <link rel="stylesheet" href="css/page/base.css">
+        <!--configurações globais de caminho-->
+        <script src="js/page/configuracao.js"></script>
+        <!--momentjs-->
+        <script src="lib/momentjs/moment.js"></script>
+
+        <link rel="stylesheet" href="css/page/comments.css">
+        <script src="js/page/comments.js"></script>
+        <!--PUSHER MSG-->
+        <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+        <script src="js/page/alert-msgs.js"></script>
+    </head>
+    <body  class="fadeIn">
+    <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+        <a class="navmenu-brand" id="userName" href="#">Jezzy</a>
+        <ul class="nav navmenu-nav">
+            <li><a href="home.html"><img src='img/icons/homeFooterIcon.PNG' class="icon-bar">HOME</a></li>
+            <li><a href="my_profile.html"><img src='img/icons/Usuario.png' class="icon-bar">PERFIL</a></li>
+            <!--li><a href="company_selection.html"  id="calendarServicesOptions2" ><img src='img/icons/calendarFooterIcon.PNG' class="icon-bar">AGENDAR</a></li-->
+            <li class="active"><a href="offer_display.html"><img src='img/icons/offerFooterIcon.PNG' class="icon-bar">OFERTAS</a></li>
+            <li><a href="services_history.html"><img src='img/icons/Servicos.png' class="icon-bar">SERVIÇOS REALIZADOS</a></li>
+            <!--li><a href="offer_history.html"><img src='img/icons/cardFooterIcon.PNG' class="icon-bar">COMPRAS REALIZADAS</a></li-->
+            <!--li><a href="notifications.html"><img src='img/icons/Sino.png' class="icon-bar">NOTIFICAÇÕES</a></li-->
+            <li><a href="news.html"><img src='img/icons/feedNoticias.png' class="icon-bar">FEED/NOTÍCIAS</a></li>
+            <!--li><a href="vouchers_list.html"><img src='img/icons/Voucher-02.png' class="icon-bar">MEUS VOUCHERS</a></li-->
+            <li><a onclick="Sair();"><img src='img/icons/Sair%20-%20branco-07.png' class="icon-bar" onclick="Sair();">SAIR</a></li>
+        </ul>
+    </nav>
+    <div class="navbar-default navbar-fixed-top centerLogoJezzy">
+            <span class="">
+                <img src="img/icons/logo_login.PNG" class="sizeLogo" id="scroll"/>
+            </span>
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+            <img src="img/icons/Menu.png" class="menu" id="menu"/>
+        </button>
+            <span class="iconSearchJezzy" >
+                <div  class="menu" ></div>
+            </span>
+        <div class="bottomLine"></div>
+
+    </div>
+        <div class="container">
+            <div class="row " id="rowPageCompanys">
+                <img src="img/icons/Chevron%20dourado.png" class="icone backbutton col-xs-2" onclick="voltar();">
+                <div id="companyListNames" class="newAddressText col-xs-8" style="margin-top:4%;"></div>
+            </div>
+    <div id="formcomments" style="display:none" >
+
+            <div class="row  numberOfStarsLine" id="rowPageCompanys2">
+                <div class="marginTop5 marginBottom5" id="companyListNames2">
+                    <img src="img/icons/Estrelinhas-02.png" class="numberOfStars" id="companyListName1" onclick="umaestrela();"/>
+                    <img src="img/icons/Estrelinhas-02.png" class="numberOfStars" id="companyListName2" onclick="duasestrelas();"/>
+                    <img src="img/icons/Estrelinhas-02.png" class="numberOfStars" id="companyListName3" onclick="tresestrelas();"/>
+                    <img src="img/icons/Estrelinhas-02.png" class="numberOfStars" id="companyListName4" onclick="quatroestrelas();"/>
+                    <img src="img/icons/Estrelinhas-02.png" class="numberOfStars" id="companyListName5" onclick="cincoestrelas();"/>
+                </div>
+            </div>
+
+            <div class="row " id="rowPageCompanys3">
+                <div class="col-xs-12 newAddressInfo marginTop5 marginBottom5">
+                    <input class="textAreaOption transparent-input2 titleComment"  id="companyListNames3" type='text' name='name' placeholder="Titulo do Comentario"  required>
+                </div>
+            </div>
+            <div class="row " id="rowPageCompanys4">
+                <div class="col-xs-12 newAddressInfo marginTop5 marginBottom5" >
+                    <textarea class="textAreaOption transparent-input Comment" placeholder="Comentario" id="companyListNames4"></textarea>
+                </div>
+            </div>
+
+    <!--  <div class="row socialRow">
+                  <div class="col-xs-12">
+                      <img src="img/icons/Facebook.png" class="socialIcom"/>
+                      <img src="img/icons/Instagram.png" class="socialIcom marginLeft10" />
+                      <img src="img/icons/Google%20play.png" class="socialIcom marginLeft10" />
+                      <img src="img/icons/Twitter.png" class="socialIcom marginLeft10" />
+                  </div>
+              </div>  -->
+
+        <div type="button" class="row okNewAddress" id="okButton">
+            <div class="btn  btn-info btn-block" onclick="InserirComentario()">
+               INSERIR COMENTARIO
+            </div>
+        </div>
+        </div>
+    <div id="comments" class="comments">
+
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

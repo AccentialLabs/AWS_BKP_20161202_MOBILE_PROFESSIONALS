@@ -1,0 +1,78 @@
+@font-face {
+
+    font-family: "Open Sans";
+    src: url("../../fonte/OpenSans-Regular.ttf") format("truetype");
+
+}
+.btn {
+    border-radius: 0px;
+}
+.btn-primary {
+    background-color: #3b5997;
+}
+.btn-success  {
+    background-color: #2497ac;
+    border-color: #2497ac;
+}
+.btn-info {
+    background-color: #A9A055;
+    border-color: #A9A055;
+}
+.btn-warning {
+    color: #A9A055;
+    background-color: #FFFFFF;
+    border-color: #A9A055;
+}
+.rowLogo {
+    text-align: center;
+margin-top: 25px;
+}
+.backbutton{
+    bottom:5%!important;
+}
+.bottomLine {
+    width: 100%;
+    border-bottom: .5px solid #A9A055!important;
+}
+.textLogin {
+    font-family: "Open Sans";
+    font-size: 4vw;
+    color: #A9A055;
+    margin-top:50%;
+    text-align: center;
+}
+.result{
+    text-align: center;
+}
+.marginTop25 {
+    margin-top: 25px;
+}
+input.transparent-input{
+    display: block;
+    background-color:transparent !important;
+    border-bottom: 1px solid #A9A055 !important;
+    padding: 10px 10px 10px 10px;
+    width: 100%;
+}
+
+.unit { 
+    position: absolute; 
+    display: block; 
+    left: 16px;
+    top: 3px;
+    z-index: 9; 
+}
+.input-box { 
+    position: relative; 
+}
+.logobackgroudWhite {
+    width: 140px;
+    margin-top: -50px;
+}
+
+.modal-content {
+    text-align: center;
+    height: 55px;
+    padding-top: 15px;
+    color: red;
+}

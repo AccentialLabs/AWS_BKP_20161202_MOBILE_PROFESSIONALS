@@ -1,0 +1,67 @@
+<div class="col-xs-12" style="background-color: #2597AC;height: 12vw!important;color:white;font-family: 'Open Sans';padding-top:1.5vw;margin-left:0%;margin-right:0%;padding-left:0%;padding-right:0%;">
+
+        <div class="col-xs-9">
+            <span class="col-xs-2">2/12</span><span class="col-xs-10">Marina Oliveira</span>
+            <span class="col-xs-2">15:00</span><span  class="col-xs-10">CORTE DE CABELO</span>
+        </div>
+        <div class="col-xs-3" style="font-size: 7vw;font-weight: 100;">
+            <img src="img/icons/ok%20-%20check.png" style="height:20px;width:20px;">
+            <img src="img/icons/Sair%20-%20branco-07.png" style="height:20px;width:20px;">
+        </div>
+    </div>
+
+    <div class="col-xs-12" style="background-color: #78BDCA;height: 12vw!important;color:white;font-family: 'Open Sans';padding-top:1.5vw;margin-left:0%;margin-right:0%;padding-left:0%;padding-right:0%;">
+
+        <div class="col-xs-9">
+            <span class="col-xs-2">2/12</span><span class="col-xs-10">Paloma Nogueira</span>
+            <span class="col-xs-2">18:00</span><span  class="col-xs-10">LUZES</span>
+        </div>
+        <div class="col-xs-3" style="font-size: 7vw;font-weight: 100;">
+            <img src="img/icons/mais.png" style="height:30px;width:30px;align-items: center;margin-left: 20px;">
+        </div>
+
+    </div>
+    <div class="col-xs-12" style="background-color: #78BDCA;height: 12vw!important;color:white;font-family: 'Open Sans';padding-top:1.5vw;margin-left:0%;margin-right:0%;padding-left:0%;padding-right:0%;">
+
+        <div class="col-xs-9">
+            <span class="col-xs-2">2/12</span><span class="col-xs-10">Paloma Nogueira</span>
+            <span class="col-xs-2">18:00</span><span  class="col-xs-10">LUZES</span>
+        </div>
+        <div class="col-xs-3" style="font-size: 7vw;font-weight: 100;">
+            <img src="img/icons/mais.png" style="height:30px;width:30px;align-items: center;margin-left: 20px;">
+        </div>
+
+    </div>
+    <div class="col-xs-12" style="background-color: #78BDCA;height: 12vw!important;color:white;font-family: 'Open Sans';padding-top:1.5vw;margin-left:0%;margin-right:0%;padding-left:0%;padding-right:0%;">
+
+        <div class="col-xs-9">
+            <span class="col-xs-2">2/12</span><span class="col-xs-10">Paloma Nogueira</span>
+            <span class="col-xs-2">18:00</span><span  class="col-xs-10">LUZES</span>
+        </div>
+        <div class="col-xs-3" style="font-size: 7vw;font-weight: 100;">
+            <img src="img/icons/mais.png" style="height:30px;width:30px;align-items: center;margin-left: 20px;">
+        </div>
+
+    </div>
+    <div class="col-xs-12" style="background-color: #2597AC;height: 12vw!important;color:white;font-family: 'Open Sans';padding-top:1.5vw;margin-left:0%;margin-right:0%;padding-left:0%;padding-right:0%;">
+
+        <div class="col-xs-9">
+            <span class="col-xs-2">2/12</span><span class="col-xs-10">Marina Oliveira</span>
+            <span class="col-xs-2">15:00</span><span  class="col-xs-10">CORTE DE CABELO</span>
+        </div>
+        <div class="col-xs-3" style="font-size: 7vw;font-weight: 100;">
+            <img src="img/icons/ok%20-%20check.png" style="height:20px;width:20px;">
+            <img src="img/icons/Sair%20-%20branco-07.png" style="height:20px;width:20px;">
+        </div>
+    </div>
+    <div class="col-xs-12" style="background-color: #78BDCA;height: 12vw!important;color:white;font-family: 'Open Sans';padding-top:1.5vw;margin-left:0%;margin-right:0%;padding-left:0%;padding-right:0%;">
+
+        <div class="col-xs-9">
+            <span class="col-xs-2">2/12</span><span class="col-xs-10">Paloma Nogueira</span>
+            <span class="col-xs-2">18:00</span><span  class="col-xs-10">LUZES</span>
+        </div>
+        <div class="col-xs-3" style="font-size: 7vw;font-weight: 100;">
+            <img src="img/icons/mais.png" style="height:30px;width:30px;align-items: center;margin-left: 20px;">
+        </div>
+
+    </div>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jezzy</title>
+    <link rel="shortcut icon" href="img/icons/favicon.ico">
+    <script src="lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="lib/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/jasny-bootstrap/css/jasny-bootstrap.min.css">
+    <script src = "js/page/base.js"></script>
+    <link rel="stylesheet" href="css/page/base.css">
+    <script src="js/page/newsfeed.js"></script>
+    <script src="js/page/configuracao.js"></script>
+    <link rel="stylesheet" href="css/page/news.css">
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src = "js/page/rss.js"></script>
+    <script src = "js/page/rssmakeup.js"></script>
+    <script src = "js/page/rssnail.js"></script>
+    <script src = "js/page/rsss.js"></script>
+    <script src="lib/jquery-storage/jquery.cookie.js"></script>
+    <script src="lib/jquery-storage/jquery.storageapi.min.js"></script>
+    <!--PUSHER MSG-->
+    <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+    <script src="js/page/alert-msgs.js"></script>
+
+</head>
+<body class="fadeIn" onload="mudarnoticia();mudarnoticiamakeup();mudarnoticianail();mudarnoticiasobrancelha();">
+
+<script>
+    $(document).ready(function() {
+
+    });
+</script>
+<nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+    <a class="navmenu-brand" id="userName" href="#">Jezzy</a>
+    <ul class="nav navmenu-nav">
+        <li><a href="home.html"><img src='img/icons/homeFooterIcon.PNG' class="icon-bar">HOME</a></li>
+        <li><a href="my_profile.html"><img src='img/icons/Usuario.png' class="icon-bar">PERFIL</a></li>
+        <!--li><a href="company_selection.html"  id="calendarServicesOptions2" ><img src='img/icons/calendarFooterIcon.PNG' class="icon-bar">AGENDAR</a></li-->
+        <!--li><a href="offer_display.html"><img src='img/icons/offerFooterIcon.PNG' class="icon-bar">OFERTAS</a></li-->
+        <li><a href="services_history.html"><img src='img/icons/Servicos.png' class="icon-bar">SERVIÇOS REALIZADOS</a></li>
+        <!--li><a href="offer_history.html"><img src='img/icons/cardFooterIcon.PNG' class="icon-bar">COMPRAS REALIZADAS</a></li-->
+        <!--li><a href="notifications.html"><img src='img/icons/Sino.png' class="icon-bar">NOTIFICAÇÕES</a></li-->
+        <li class="active"><a href="newsfeed.html"><img src='img/icons/feedNoticias.png' class="icon-bar">FEED/NOTÍCIAS</a></li>
+        <!--li><a href="vouchers_list.html"><img src='img/icons/Voucher-02.png' class="icon-bar">MEUS VOUCHERS</a></li-->
+        <li><a onclick="Sair();"><img src='img/icons/Sair%20-%20branco-07.png' class="icon-bar" onclick="Sair();">SAIR</a></li>
+    </ul>
+</nav>
+<div class="navbar navbar-default navbar-fixed-top centerLogoJezzy" style="margin-bottom:0%; line-height: 10%; min-height:6%;">
+            <span class="centerLogo">
+                <img src="img/icons/logo_login.PNG" class="marginTop5 sizeLogo" id="scroll"/>
+            </span>
+    <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+        <img src="img/icons/Menu.png" class="menu" id="menu"/>
+    </button>
+            <span class="iconSearchJezzy" >
+                <img src="img/icons/Sino.png" class="menu marginTop5" id="UserLink" />
+            </span>
+    <div class="bottomLine"></div>
+</div>
+<div class="container">
+    <div class=" firstLine col-xs-12" style="margin-top:15%">
+        <img src="img/icons/Chevron%20dourado.png" onclick="voltar(); " class="btn icone col-xs-2">
+        <div class="col-xs-6 pull-left fontSizeClass titulo newAddressText" style="margin-top:4%">NOTICIAS</div>
+    </div>
+    <div class="linha">
+        <div class="coluna-imagem">
+            <img src="" id="imagem1" class="imagem" style="cursor: pointer" onclick="window.open('newsfeedcategory.html?botao=beleza', target='_parent');">
+        </div>
+        <div class="coluna-texto">
+            <header style="cursor: pointer; font-size:1em;" id="tema1" onclick="window.open('newsfeedcategory.html?botao=beleza', target='_parent');">BELEZA</header>
+            <div class="bottomLine2"></div>
+            <div id="result" style="padding: 3%; text-justify:distribute;" class="textocoluna"> <br>
+            </div>
+            <input type ="hidden" name="indicebeleza" id="indicebeleza"/>
+            <img src="img/icons/Mais-03.png" class="btn icone"  onclick="window.open('newsfeed.html?botao=beleza', target='_parent');"> <a class="textocoluna" onclick="window.open('newsfeed.html?botao=beleza', target='_parent');">Saiba Mais.</a>
+        </div>
+    </div>
+
+    <div class="linha">
+
+        <div class="coluna-texto">
+            <header style="cursor: pointer; font-size:1em;" id="tema2" onclick="window.open('newsfeedcategory.html?botao=maquiagem', target='_parent');">MAQUIAGEM</header>
+            <div class="bottomLine2"></div>
+            <div id="resultm" style="padding: 3%; text-justify:distribute;" class="textocoluna"> <br>
+            </div>
+            <img src="img/icons/Mais-03.png" class="btn icone" onclick="window.open('newsfeed.html?botao=maquiagem', target='_parent');"> <a class="textocoluna" onclick="window.open('newsfeed.html?botao=maquiagem', target='_parent');">Saiba Mais.</a>
+            <input type ="hidden" name="indicebeleza" id="indicemakeup"/>
+        </div>
+        <div class="coluna-imagem">
+            <img src="" id="imagem2"  class="imagem" style="cursor: pointer" onclick="window.open('newsfeedcategory.html?botao=maquiagem', target='_parent');">
+        </div>
+    </div>
+
+    <div class="linha">
+        <div class="linha">
+            <div class="coluna-imagem">
+                <img src="" id="imagem3"  class="imagem" style="cursor: pointer" onclick="window.open('newsfeedcategory.html?botao=unha', target='_parent');">
+            </div>
+            <div class="coluna-texto">
+                <header style="cursor: pointer; font-size:1em;" id="tema3" onclick="window.open('newsfeedcategory.html?botao=unha', target='_parent');">UNHAS</header>
+                <div class="bottomLine2"></div>
+                <div id="resultn" style="padding: 3%; text-justify:distribute;" class="textocoluna"> <br>
+                </div> <input type ="hidden" name="indicebeleza" id="indiceunha"/>
+                <img src="img/icons/Mais-03.png" class="btn icone" onclick="window.open('newsfeed.html?botao=unha', target='_parent');"> <a class="textocoluna" onclick="window.open('newsfeed.html?botao=unha', target='_parent');">Saiba Mais.</a>
+            </div>
+        </div>
+
+
+        <div class="linha">
+
+            <div class="coluna-texto">
+                <header style="cursor: pointer; font-size:1em;" id="tema4" onclick="window.open('newsfeedcategory.html?botao=sobrancelha', target='_parent');">SOBRANCELHA</header>
+                <div class="bottomLine2"></div>
+                <div id="results" style="padding: 3%; text-justify:distribute;" class="textocoluna"> <br>
+            </div>
+                <img src="img/icons/Mais-03.png" class="btn icone" onclick="window.open('newsfeed.html?botao=sobrancelha', target='_parent');"> <a class="textocoluna" onclick="window.open('newsfeed.html?botao=sobrancelha', target='_parent');">Saiba Mais.</a>
+                <input type ="hidden" name="indicebeleza" id="indicesobrancelha"/>
+            </div>
+            <div class="coluna-imagem">
+                <img src="" id="imagem4"  class="imagem" style="cursor: pointer" onclick="window.open('newsfeedcategory.html?botao=sobrancelha', target='_parent');">
+            </div>
+        </div>
+
+</div>
+</div>
+</body>
+</html>

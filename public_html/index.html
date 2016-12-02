@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jezzy</title>
+    <link rel="shortcut icon" href="img/icons/favicon.ico">
+    <script src="lib/jquery/jquery-2.1.4.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/JavaScript-MD5-master/js/md5.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/jasny-bootstrap/css/jasny-bootstrap.min.css">
+    <script src="lib/jquery/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="css/page/base.css">
+    <script src="js/page/index.js"></script>
+    <script src="js/page/configuracao.js"></script>
+    <script src="lib/jquery/jquery.base64.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
+    <script src="lib/jquery-storage/jquery.cookie.js"></script>
+    <script src="lib/jquery-storage/jquery.storageapi.min.js"></script>
+    <link rel="stylesheet" href="css/page/index.css">
+    <script src="lib/jquery-confirm/js/jquery-confirm.min.js"></script>
+    <link rel="stylesheet" href="lib/jquery-confirm/css/jquery-confirm.min.css">
+    <script src="lib/jquery-storage/json2.js"></script>
+    <script src="lib/momentjs/moment.js"></script>
+
+</head>
+<body  class="fadeIn">
+
+
+<div id="corpodoindex" class="container hide">
+    <div class="row rowLogo">
+        <div class="col-xs-12">
+            <img src="img/icons/logo_login_fundo_branco.PNG" class="logobackgroudWhite" >
+        </div>
+    </div>
+    <div class="row textLogin marginTop25">
+        <div class="col-xs-12 input-box">
+            <input class="form-control transparent-input" type='text' name='name' id="nameInput" placeholder="EMAIL" required>
+        </div>
+
+    </div>
+    <div class="row textLogin marginTop25">
+        <div class="col-xs-12 input-box">
+            <input  autofocus="autofocus" class="form-control transparent-input" type='password' name='pass' placeholder="SENHA" id="passInput" value="" required>
+        </div>
+    </div>
+    <div class="row marginTop25">
+        <div class="col-xs-12">
+            <button type="button" class="btn btn-success btn-lg btn-block" id="enterMobilebuttom">ENTRAR</button>
+            <button type="button" class="btn btn-warning btn-lg btn-block" onclick= 'window.location.href ="forgot_password.html"'>ESQUECI MINHA SENHA</button>
+
+        </div>
+
+    </div>
+    <div id="fb-root"></div>
+    <script>
+/*
+        function statusChangeCallback(response) {
+            console.log(response.status);
+            // The response object is returned with a status field that lets the
+            // app know the current login status of the person.
+            // Full docs on the response object can be found in the documentation
+            // for FB.getLoginStatus().
+            if (response.status === 'connected') {
+                // Logged into your app and Facebook.
+                testAPI();
+            } else if (response.status === 'not_authorized') {
+                // The person is logged into Facebook, but not your app.
+                testAPI();
+            } else if(response.status === 'unknown'){
+                // The person is not logged into Facebook, so we're not sure if
+                // they are logged into this app or not.
+                FB.login(function(response){
+                    if(response.authResponse){
+                        API();
+                    }
+                },{
+                    scope:'email',
+                    auth_type:'rerequest'
+                });
+
+            }
+        }
+
+        function checkLoginState() {
+            FB.getLoginStatus(function(response) {
+                statusChangeCallback(response);
+            });
+        }
+
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.5&appId=1071284139626729";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '1071284139626729',
+                cookie     : true,  // enable cookies to allow the server to access
+                                    // the session
+                xfbml      : true,  // parse social plugins on this page
+                version    : 'v2.7',
+                fields: 'id,name,email'// use graph api version 2.5
+
+            });
+
+            // Now that we've initialized the JavaScript SDK, we call
+            // FB.getLoginStatus().  This function gets the state of the
+            // person visiting this page and can return one of three states to
+            // the callback you provide.  They can be:
+            //
+            // 1. Logged into your app ('connected')
+            // 2. Logged into Facebook, but not your app ('not_authorized')
+            // 3. Not logged into Facebook and can't tell if they are logged into
+            //    your app or not.
+            //
+            // These three cases are handled in the callback function.
+
+
+
+        };
+
+        // Load the SDK asynchronously
+        function LogOut(){
+            FB.logout(function(response) {
+            });
+        }
+        function API(){
+            FB.api("/me?fields=id,name,email,picture.type(large)", function (response) {
+                console.log(response);
+                if (response && !response.error) {
+                    var email = response.email;
+                    var idfb = response.id;
+                    var picture = response.picture.data.url;
+
+
+
+                    if(email == undefined){
+                        LogOut();
+                        generateModalAlert("Necessário que você autorize a utilização de email para realizar cadastro no Jezzy!");
+                        $('#mymodal').modal('show');
+
+                    }else{
+                        usuario = email.substring(0, email.indexOf("@"));
+                        dominio = email.substring(email.indexOf("@")+ 1, email.length);
+                        if ((usuario.length >=1) && (dominio.length >=3) && (usuario.search("@")==-1) && (dominio.search("@")==-1) && (usuario.search(" ")==-1) && (dominio.search(" ")==-1) && (dominio.search(".")!=-1) && (dominio.indexOf(".") >=1)&& (dominio.lastIndexOf(".") < dominio.length - 1)) {
+                            var name = response.name;
+                            var password = response.id;
+                            var formatDate = new Date;
+                            var dateregister = moment(formatDate).format('YYYY-MM-DD');
+                            var passhash =md5(password).toString();
+
+                            if(email != "" && name != "" && password != ""){
+
+                                var conditionsCreateUser = {
+                                    'General': {
+                                        'query': "SELECT*FROM users User WHERE `email` = '"+email.toLowerCase()+"';"
+                                    }
+                                };
+
+                                var postDataCreateUser = JSON.stringify(conditionsCreateUser);
+
+                                postDataCreateUser = {
+                                    'params': postDataCreateUser
+                                };
+                                var urlCreateUser = 'https://'+api+'/General/get/query/' + createToken();
+
+                                $.ajax({
+                                    method: "POST",
+                                    url: urlCreateUser,
+                                    data: postDataCreateUser
+
+                                }).done(function (result) {
+
+                                    if(result != "ImE6MDp7fSI="){
+                                        var objReturn = JSON.parse(JSON.stringify(result));
+                                        var decodeObjReturn = Base64.decode(objReturn);
+                                        var convertedReturn = unserialize(JSON.parse(decodeObjReturn));
+
+                                        //INICIO DO LOGIN
+
+                                        $.cookieStorage.set(convertedReturn[0]);
+
+
+                                        if ($.cookieStorage.isSet('User')) {
+                                            var query = "SELECT * FROM facebook_profiles WHERE user_id = " + $.cookieStorage.get('SecondaryUser').id ;
+                                            console.log(query);
+                                            var conditions={
+                                                'General': {
+                                                    'query': query
+                                                }
+                                            };
+                                            var postData = JSON.stringify(conditions);
+
+                                            postData = {
+                                                'params': postData
+                                            };
+                                            var url = 'https://'+api+'/General/get/query/' + createToken();
+
+                                            $.ajax({
+                                                method: "POST",
+                                                url: url,
+                                                data: postData
+                                            }).done(function(result) {
+                                                console.log(result);
+                                                var objReturn = JSON.parse(JSON.stringify(result));
+                                                var decodeObjReturn = Base64.decode(objReturn);
+                                                var convertedReturn = unserialize(JSON.parse(decodeObjReturn));
+
+                                                $.cookieStorage.set(convertedReturn[0]);
+                                                window.location.href = 'home.html';
+
+
+                                            }).error(function (XMLHttpRequest, textStatus, errorThrown) {
+                                                alert(errorThrown);
+                                            });
+
+
+                                        } else {
+                                            generateModalAlert("Erro ao entrar. Tente novamente");
+                                            $('#mymodal').modal('show');
+                                        }
+                                        //FIM DO LOGIN
+                                    }else {
+                                        if(email == undefined){
+                                            LogOut();
+                                            generateModalAlert("Necessário que você autorize a utilização de email para realizar cadastro no Jezzy!");
+                                            $('#mymodal').modal('show');
+
+                                        }
+                                        var conditionsCreateUser = {
+                                            'General': {
+                                                'query': "INSERT users(email, name, password, gender, birthday, address, city, zip_code, number, state, complement, district, photo, date_register) VALUES ('"+ email+"','"+response.name+"','"+passhash+"', '', '0000-00-00','', '', '', '', '', '', '', 'http://graph.facebook.com/"+response.id+"/picture?type=large', '"+dateregister+"');"
+                                            }
+                                        };
+
+                                        var postDataCreateUser = JSON.stringify(conditionsCreateUser);
+
+                                        postDataCreateUser = {
+                                            'params': postDataCreateUser
+                                        };
+                                        var urlCreateUser = 'https://'+api+'/General/get/query/' + createToken();
+
+                                        $.ajax({
+                                            method: "POST",
+                                            url: urlCreateUser,
+                                            data: postDataCreateUser
+
+                                        }).done(function (result) {
+
+                                            var conditionsCreateUser = {
+                                                'General': {
+                                                    'query': "SELECT*FROM users User WHERE `email` = '"+email+"';"
+                                                }
+                                            };
+                                            console.log(conditionsCreateUser);
+                                            var postDataCreateUser = JSON.stringify(conditionsCreateUser);
+
+                                            postDataCreateUser = {
+                                                'params': postDataCreateUser
+                                            };
+                                            var urlCreateUser = 'https://'+api+'/General/get/query/' + createToken();
+
+                                            $.ajax({
+                                                method: "POST",
+                                                url: urlCreateUser,
+                                                data: postDataCreateUser
+
+                                            }).done(function (result) {
+                                                console.log(result);
+                                                if(result == "ImE6MDp7fSI="){
+                                                    generateModalAlert("Usuário não foi cadastrado!");
+                                                    $('#mymodal').modal('show');
+                                                }else {
+                                                    var objReturn = JSON.parse(JSON.stringify(result));
+                                                    var decodeObjReturn = Base64.decode(objReturn);
+                                                    var convertedReturn = unserialize(JSON.parse(decodeObjReturn));
+                                                    $.cookieStorage.set(convertedReturn[0]);
+                                                    var conditionsCreateUserPreferences = {
+                                                        'General': {
+                                                            'query': "INSERT users_preferences(user_id, background, notifications_periodicity, notifications_type, first_login) VALUES ("+$.cookieStorage.get('SecondaryUser').id+",'','','',0);"
+                                                        }
+                                                    };
+
+                                                    var postDataCreateUserPreferences = JSON.stringify(conditionsCreateUserPreferences);
+
+                                                    postDataCreateUserPreferences = {
+                                                        'params': postDataCreateUserPreferences
+                                                    };
+                                                    var urlCreateUserPreferences = 'https://'+api+'/General/get/query/' + createToken();
+
+                                                    $.ajax({
+                                                        method: "POST",
+                                                        url: urlCreateUserPreferences,
+                                                        data: postDataCreateUserPreferences
+
+                                                    }).done(function (result) {
+                                                        console.log(result);
+                                                        if(result == "ImE6MDp7fSI="){
+                                                            var name = $.cookieStorage.get('SecondaryUser').name;
+                                                            var separatedname = name.split(" ");
+                                                            var firstname = separatedname[0];
+                                                            var lastname = separatedname[1];
+                                                            var date = new Date();
+                                                            var conditionsCreateUser = {
+                                                                'General': {
+                                                                    'query': " INSERT facebook_profiles (facebook_id, user_id, name, first_name, last_name, email, gender, profile_link, birthday, location, relationship_status, religion, political, updated_time, hair_type, chemistry) VALUES ('"+idfb+"', "+$.cookieStorage.get('SecondaryUser').id+", '"+$.cookieStorage.get('SecondaryUser').name+"', '"+firstname+"', '"+lastname+"', '"+$.cookieStorage.get('SecondaryUser').email+"', ' ', ' ','"+$.cookieStorage.get('SecondaryUser').birthday+"', '', '', '', '', '"+date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate()+"', '', ''); "
+                                                                }
+                                                            };
+                                                            console.log(conditionsCreateUser);
+                                                            var postDataCreateUser = JSON.stringify(conditionsCreateUser);
+
+                                                            postDataCreateUser = {
+                                                                'params': postDataCreateUser
+                                                            };
+                                                            var urlCreateUser = 'https://'+api+'/General/get/query/' + createToken();
+
+                                                            $.ajax({
+                                                                method: "POST",
+                                                                url: urlCreateUser,
+                                                                data: postDataCreateUser
+
+                                                            }).done(function (result) {
+                                                                var query = "SELECT * FROM facebook_profiles WHERE user_id = " + $.cookieStorage.get('SecondaryUser').id ;
+                                                                var conditions={
+                                                                    'General': {
+                                                                        'query': query
+                                                                    }
+                                                                };
+                                                                var postData = JSON.stringify(conditions);
+
+                                                                postData = {
+                                                                    'params': postData
+                                                                };
+                                                                var url = 'https://'+api+'/General/get/query/' + createToken();
+
+                                                                $.ajax({
+                                                                    method: "POST",
+                                                                    url: url,
+                                                                    data: postData
+                                                                }).done(function(result) {
+                                                                    var objReturn = JSON.parse(JSON.stringify(result));
+                                                                    var decodeObjReturn = Base64.decode(objReturn);
+                                                                    var convertedReturn = unserialize(JSON.parse(decodeObjReturn));
+
+                                                                    $.cookieStorage.set(convertedReturn[0]);
+                                                                    $.alert({
+                                                                        //   icon: 'fa fa-spinner fa-spin',
+                                                                        title: 'Cadastro Efetuado com Sucesso!',
+                                                                        content: false,
+                                                                        theme: 'supervan',
+                                                                        confirmButton: 'OK',
+                                                                        onOpen: function(){
+
+                                                                        },
+                                                                        confirm: function () {
+
+                                                                            window.location.href = "home.html";
+                                                                        }
+
+                                                                    });
+
+
+                                                                }).error(function (XMLHttpRequest, textStatus, errorThrown) {
+                                                                    alert(errorThrown);
+                                                                });
+
+
+
+
+
+
+                                                            }).error(function (XMLHttpRequest, textStatus, errorThrown) {
+                                                                alert(errorThrown);
+                                                            });
+
+                                                        }
+                                                    }).error(function (XMLHttpRequest, textStatus, errorThrown) {
+                                                        alert(errorThrown);
+                                                    });
+
+                                                }
+
+                                            }).error(function (XMLHttpRequest, textStatus, errorThrown) {
+                                                alert(errorThrown);
+                                            });
+
+
+                                        }).error(function (XMLHttpRequest, textStatus, errorThrown) {
+                                            alert(errorThrown);
+                                        });
+                                    }
+
+
+                                }).error(function (XMLHttpRequest, textStatus, errorThrown) {
+                                    alert(errorThrown);
+                                });
+                            }else{
+                                generateModalAlert("Preencha corretamente todos os campos!");
+                                $('#mymodal').modal('show');
+                            }
+                        } else {
+                            generateModalAlert("E-mail inválido!");
+                            $('#mymodal').modal('show');
+                        }
+                    }
+                }
+            });
+        }
+        function testAPI() {
+            FB.login(function(response){
+                if(response.authResponse){
+                    API();
+                }
+            }, {
+                scope:'email'
+            });
+
+        }
+    */
+    </script>
+
+</div>
+
+<div id="status">
+</div>
+</body>
+</html>
